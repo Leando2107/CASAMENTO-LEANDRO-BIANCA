@@ -1,0 +1,1837 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site do casamento de Leandro e Bianca - 14 de Março de 2026">
+    <meta name="keywords" content="casamento, Leandro, Bianca, 14 de Março de 2026, lista de presentes">
+    <title>Leandro & Bianca - Nosso Casamento</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Dancing+Script:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Reset e estilos base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-color: #8B7355;
+            --secondary-color: #D4B996;
+            --accent-color: #C19A6B;
+            --text-color: #333;
+            --light-color: #f9f9f9;
+        }
+        
+        body {
+            font-family: 'Playfair Display', serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: var(--light-color);
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            height: 100vh;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            position: relative;
+        }
+        
+        .couple-names {
+            font-family: 'Dancing Script', cursive;
+            font-size: 5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .wedding-date {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+        
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .countdown-item {
+            background: rgba(255,255,255,0.2);
+            padding: 20px;
+            border-radius: 5px;
+            min-width: 100px;
+            backdrop-filter: blur(5px);
+        }
+        
+        .countdown-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        
+        /* Seções */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+            position: relative;
+            font-family: 'Dancing Script', cursive;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 2px;
+            background: var(--accent-color);
+            margin: 15px auto;
+        }
+        
+        /* Nossa História */
+        .our-story {
+            background-color: white;
+        }
+        
+        .story-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .story-text {
+            flex: 1;
+            min-width: 300px;
+            font-size: 1.1rem;
+        }
+        
+        .story-text p {
+            margin-bottom: 20px;
+        }
+        
+        .story-image {
+            flex: 1;
+            min-width: 300px;
+            height: 400px;
+            background-image: url(imagemcasal.jpeg);
+            border-radius: 5px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        
+        /* Detalhes do Casamento */
+        .wedding-details {
+            background-color: var(--light-color);
+        }
+        
+        .details-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+        }
+        
+        .detail-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .detail-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .detail-icon {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+        }
+        
+        .detail-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        /* Galeria */
+        .gallery {
+            background-color: white;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .gallery-item {
+            height: 250px;
+            background: #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Modal da Galeria */
+        .gallery-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .gallery-modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+        }
+        
+        .gallery-modal img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        
+        .gallery-modal-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+        
+        .gallery-modal-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: none;
+            font-size: 2rem;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .gallery-modal-prev {
+            left: 20px;
+        }
+        
+        .gallery-modal-next {
+            right: 20px;
+        }
+        
+        /* Lista de Presentes */
+        .gift-list {
+            background-color: var(--light-color);
+            text-align: center;
+        }
+        
+        .gifts-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px;
+            font-size: 1.1rem;
+        }
+        
+        .gift-categories {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .category-btn {
+            background: white;
+            border: 2px solid var(--secondary-color);
+            padding: 10px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .category-btn.active, .category-btn:hover {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+        
+        .gifts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .gift-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .gift-item:hover {
+            transform: translateY(-10px);
+        }
+        
+        .gift-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .gift-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gift-item:hover .gift-image img {
+            transform: scale(1.1);
+        }
+        
+        .gift-info {
+            padding: 20px;
+        }
+        
+        .gift-name {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        .gift-price {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+        }
+        
+        .gift-description {
+            margin-bottom: 20px;
+            color: #666;
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+        
+        .gift-actions {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+            flex: 1;
+            margin-right: 10px;
+        }
+        
+        .btn-primary:hover {
+            background: var(--accent-color);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--light-color);
+        }
+        
+        .gift-reserved {
+            background: #f0f0f0;
+            position: relative;
+        }
+        
+        .gift-reserved:after {
+            content: 'Presenteado';
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: var(--accent-color);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 0.8rem;
+        }
+        
+        .payment-methods {
+            margin-top: 50px;
+            text-align: center;
+        }
+        
+        .payment-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .payment-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+        }
+        
+        /* Modal de Pagamento PIX - Estilo da Foto */
+        .pix-payment-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .pix-payment-content {
+            background: white;
+            border-radius: 20px;
+            max-width: 400px;
+            width: 100%;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .pix-header {
+            background: linear-gradient(135deg, #8B7355, #C19A6B);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .pix-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .pix-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .pix-amount {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 15px 0;
+        }
+
+        .pix-subtitle {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+
+        .pix-body {
+            padding: 30px 25px;
+        }
+
+        .instructions-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            text-align: center;
+        }
+
+        .instructions-list {
+            margin-bottom: 25px;
+        }
+
+        .instruction-step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            padding: 12px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .step-number {
+            background: var(--accent-color);
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-right: 12px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .step-text {
+            flex: 1;
+            color: #333;
+            line-height: 1.4;
+        }
+
+        .pix-code-container {
+            background: #f8f9fa;
+            border: 2px dashed #dee2e6;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .pix-code {
+            font-family: 'Courier New', monospace;
+            font-size: 0.8rem;
+            color: #333;
+            word-break: break-all;
+            line-height: 1.4;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+        }
+
+        .copy-btn {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .copy-btn:hover {
+            background: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        .copy-btn.copied {
+            background: #28a745;
+        }
+
+        .pix-footer {
+            text-align: center;
+            padding: 20px 25px;
+            background: #f8f9fa;
+            border-top: 1px solid #e9ecef;
+        }
+
+        .confirm-text {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn-cancel {
+            background: #6c757d;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex: 1;
+        }
+
+        .btn-cancel:hover {
+            background: #5a6268;
+        }
+
+        .btn-success {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex: 1;
+        }
+
+        .btn-success:hover {
+            background: #218838;
+        }
+
+        .payment-confirmed {
+            display: none;
+            text-align: center;
+            padding: 40px 25px;
+        }
+
+        .success-icon {
+            font-size: 4rem;
+            color: #28a745;
+            margin-bottom: 20px;
+        }
+
+        .success-title {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .success-message {
+            color: #666;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        /* Loading durante o processamento */
+        .payment-loading {
+            display: none;
+            text-align: center;
+            padding: 40px 25px;
+        }
+
+        .loading-spinner {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid var(--accent-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Timer de expiração */
+        .expiry-timer {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 10px 15px;
+            margin: 15px 0;
+            text-align: center;
+            color: #856404;
+            font-weight: 600;
+        }
+
+        .timer-text {
+            font-size: 0.9rem;
+        }
+
+        .timer-value {
+            font-size: 1.1rem;
+            color: var(--primary-color);
+        }
+
+        /* Confirmação de Presença */
+        .rsvp {
+            background-color: white;
+        }
+        
+        .rsvp-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--light-color);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border 0.3s ease;
+        }
+        
+        input:focus, select:focus, textarea:focus {
+            border-color: var(--accent-color);
+            outline: none;
+        }
+        
+        button {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+            width: 100%;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+        
+        button:hover {
+            background: var(--accent-color);
+        }
+        
+        .whatsapp-info {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+        }
+        
+        .footer-content h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-content p {
+            margin-bottom: 10px;
+        }
+        
+        /* Loading Indicator */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+            margin-right: 10px;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .couple-names {
+                font-size: 3rem;
+            }
+            
+            .wedding-date {
+                font-size: 1.3rem;
+            }
+            
+            .countdown-item {
+                min-width: 70px;
+                padding: 15px;
+            }
+            
+            .countdown-number {
+                font-size: 1.8rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .rsvp-form {
+                padding: 30px 20px;
+            }
+            
+            .gifts-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+            
+            .gift-actions {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .btn-primary {
+                margin-right: 0;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+            }
+            
+            .gallery-modal-nav {
+                width: 40px;
+                height: 40px;
+                font-size: 1.5rem;
+            }
+            
+            .gallery-modal-prev {
+                left: 10px;
+            }
+            
+            .gallery-modal-next {
+                right: 10px;
+            }
+        }
+        
+        /* Animações */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease forwards;
+        }
+        
+        /* Mapa */
+        .map-container {
+            margin-top: 30px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .map-placeholder {
+            height: 300px;
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+        }
+        
+        /* Acessibilidade */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        
+        /* Skip link para navegação por teclado */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary-color);
+            color: white;
+            padding: 8px;
+            z-index: 100;
+            text-decoration: none;
+        }
+        
+        .skip-link:focus {
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip link para acessibilidade -->
+    <a href="#main-content" class="skip-link">Ir para o conteúdo principal</a>
+
+    <!-- Header com imagem de fundo e contagem regressiva -->
+    <header>
+        <h1 class="couple-names fade-in">Leandro & Bianca</h1>
+        <p class="wedding-date fade-in">14 de Março de 2026</p>
+        <div class="countdown" id="countdown">
+            <div class="countdown-item">
+                <div class="countdown-number" id="days">00</div>
+                <div>Dias</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="hours">00</div>
+                <div>Horas</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="minutes">00</div>
+                <div>Minutos</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="seconds">00</div>
+                <div>Segundos</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main id="main-content">
+        <!-- Nossa História -->
+        <section class="our-story">
+            <div class="container">
+                <h2 class="section-title">Nossa História</h2>
+                <div class="story-content">
+                    <div class="story-text">
+                        <p>Tudo começou em 2023, na Federal, onde fazíamos o mesmo curso. Entre corredores, risadas e amigos em comum, nosso caminho começou a se cruzar com mais intenção. As conversas pelo Instagram foram aproximando o que o destino já estava alinhando, e logo ir embora juntos do curso virou rotina… depois disso, chegar juntos também.</p>
+                        <p>Aos poucos, nosso vínculo foi crescendo nos pequenos detalhes: as ligações nas horas vagas, os almoços juntos em meio à correria do trabalho, e cada momento que roubávamos do dia para estarmos perto um do outro. Foi assim, de gestos simples e cheios de carinho, que a amizade virou afeto e o afeto virou amor.</p>
+                       <p>Em setembro de 2023, veio o pedido de namoro. Em 2024, celebramos o noivado. Em 2025, oficializamos nossa união no civil e, agora, desejamos receber a bênção de Deus sobre a nossa história.</p>
+                        <p>Com o coração transbordando de alegria, convidamos você para celebrar esse amor junto com a gente. 💍✨</p>
+                    </div>
+                    <div class="story-image" aria-label="Foto do caal"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detalhes do Casamento -->
+        <section class="wedding-details">
+            <div class="container">
+                <h2 class="section-title">Detalhes do Casamento</h2>
+                <div class="details-container">
+                    <div class="detail-card">
+                        <div class="detail-icon">
+                            <i class="fas fa-church" aria-hidden="true"></i>
+                        </div>
+                        <h3>Cerimônia</h3>
+                        <p>Igreja Matriz de São Benedito</p>
+                        <p>20:00 horas</p>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-icon">
+                            <i class="fas fa-glass-cheers" aria-hidden="true"></i>
+                        </div>
+                        <h3>Recepção</h3>
+                        <p>Salão Portela 2</p>
+                        <p>Rod. Jorn. Francisco Aguirre Proença, km 42 - S/n - Portela</p>
+                        <p>Após a Cerimônia</p>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-icon">
+                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                        </div>
+                        <h3>Como Chegar</h3>
+                        <p>Estacionamento disponível no local</p>
+                        <p>Entrada para o estacionamento na lateral</p>
+                    </div>
+                </div>
+                
+                <!-- Mapa -->
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3664.123456789012!2d-47.47049946704449!3d-22.99583377246278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDU5JzQ1LjAiUyA0N8KwMjgnMTMuOCJX!5e0!3m2!1spt-BR!2sbr!4v1620000000000!5m2!1spt-BR!2sbr" 
+                        width="100%" 
+                        height="300" 
+                        style="border:0; border-radius: 10px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Localização do casamento">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+    
+
+        <!-- Lista de Presentes -->
+        <section class="gift-list">
+            <div class="container">
+                <h2 class="section-title">Lista de Presentes Engraçados</h2>
+                
+                <div class="gifts-intro">
+                    <p>Sabemos que o melhor presente é sua presença, mas se quiser nos presentear com algo divertido, criamos esta lista com opções hilárias! Cada item vem com uma dose extra de humor para alegrar nosso novo lar.</p>
+                    <p>Escolha o presente mais engraçado e faça parte das nossas histórias para contar!</p>
+                </div>
+                
+                <div class="gift-categories">
+                    <button class="category-btn active" data-category="all">Todos os Presentes</button>
+                    <button class="category-btn" data-category="festa">Para a Festa</button>
+                    <button class="category-btn" data-category="sobrevivencia">Sobrevivência</button>
+                    <button class="category-btn" data-category="lua-de-mel">Lua de Mel</button>
+                </div>
+                
+                <div class="gifts-grid" id="giftsContainer">
+                    <!-- Presentes serão inseridos aqui via JavaScript -->
+                </div>
+                
+                <div class="payment-methods">
+                    <h3>Formas de Pagamento</h3>
+                    <p>Aceitamos PIX em todos os bancos! Escolha seu banco e faça o pagamento diretamente pelo app.</p>
+                    <div class="payment-icons">
+                        <i class="fab fa-pix payment-icon" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Confirmação de Presença -->
+        <section class="rsvp">
+            <div class="container">
+                <h2 class="section-title">Confirme sua Presença</h2>
+                <div class="rsvp-form">
+                    <form id="rsvpForm">
+                        <div class="form-group">
+                            <label for="name">Nome Completo</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefone</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="guests">Número de Acompanhantes</label>
+                            <select id="guests" name="guests">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="attendance">Confirmo presença</label>
+                            <select id="attendance" name="attendance" required>
+                                <option value="">Selecione</option>
+                                <option value="yes">Sim, estarei presente</option>
+                                <option value="no">Não poderei comparecer</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem para os noivos (opcional)</label>
+                            <textarea id="message" name="message" rows="4"></textarea>
+                        </div>
+                        <button type="submit" id="submitButton">
+                            <span class="loading" id="loadingIcon"></span>
+                            Enviar Confirmação
+                        </button>
+                    </form>
+                    <div class="whatsapp-info">
+                        <p><i class="fab fa-whatsapp" aria-hidden="true"></i> Sua confirmação será enviada diretamente para o WhatsApp dos noivos</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h2>Leandro & Bianca</h2>
+                <p>14 de Março de 2026</p>
+                <p>Com amor, para sempre</p>
+                <p style="margin-top: 20px;">Contato: (19) 98940-9943</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de Pagamento PIX -->
+    <div class="pix-payment-modal" id="pixPaymentModal">
+        <div class="pix-payment-content">
+            <div class="pix-header">
+                <div class="pix-icon">
+                    <i class="fab fa-pix" aria-hidden="true"></i>
+                </div>
+                <h2 class="pix-title">Falta pouco!</h2>
+                <div class="pix-amount" id="pixAmount">R$ 69,40</div>
+                <p class="pix-subtitle">Pague via Pix para concluir sua compra</p>
+            </div>
+
+            <div class="pix-body">
+                <h3 class="instructions-title">Instruções de pagamento</h3>
+
+                <div class="instructions-list">
+                    <div class="instruction-step">
+                        <div class="step-number">1</div>
+                        <div class="step-text">Acesse seu Internet Banking ou app de pagamentos.</div>
+                    </div>
+                    <div class="instruction-step">
+                        <div class="step-number">2</div>
+                        <div class="step-text">Escolha pagar via Pix.</div>
+                    </div>
+                    <div class="instruction-step">
+                        <div class="step-number">3</div>
+                        <div class="step-text">Cole o código abaixo</div>
+                    </div>
+                </div>
+
+                <div class="pix-code-container">
+                    <div class="pix-code" id="pixCode">
+                        00020126580014br.gov.bcb.pix013612345678901234520400005303986540569.405802BR5913LEANDRO E BIANCA6008SAO PAULO62140510RC12345678906304A3B2
+                    </div>
+                    <button class="copy-btn" id="copyPixBtn">
+                        <i class="fas fa-copy" aria-hidden="true"></i> Copiar código
+                    </button>
+                    <p style="font-size: 0.8rem; color: #666; margin: 5px 0 0 0;">
+                        <i class="fas fa-check-circle" style="color: #28a745;" aria-hidden="true"></i> Pague e será creditado na hora.
+                    </p>
+                </div>
+
+                <div class="confirm-text">
+                    Confirmaremos a data de entrega quando o pagamento for aprovado.
+                </div>
+            </div>
+
+            <div class="pix-footer">
+                <div class="action-buttons">
+                    <button class="btn-cancel" id="cancelPayment">Ir para Minhas compras</button>
+                    <button class="btn-success" id="confirmPayment">
+                        <i class="fas fa-check" aria-hidden="true"></i> Já paguei
+                    </button>
+                </div>
+            </div>
+
+            <!-- Estados adicionais -->
+            <div class="payment-loading" id="paymentLoading">
+                <div class="loading-spinner"></div>
+                <h3>Processando pagamento...</h3>
+                <p>Aguarde enquanto confirmamos seu pagamento</p>
+            </div>
+
+            <div class="payment-confirmed" id="paymentConfirmed">
+                <div class="success-icon">
+                    <i class="fas fa-check-circle" aria-hidden="true"></i>
+                </div>
+                <h3 class="success-title">Pagamento Confirmado!</h3>
+                <p class="success-message">
+                    Obrigado! Seu presente foi reservado com sucesso.<br>
+                    Você receberá uma confirmação por WhatsApp em instantes.
+                </p>
+                <button class="btn-success" id="closeSuccess">Voltar para Lista</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal da Galeria -->
+    <div class="gallery-modal" id="galleryModal">
+        <button class="gallery-modal-close" id="galleryModalClose" aria-label="Fechar galeria">
+            <i class="fas fa-times" aria-hidden="true"></i>
+        </button>
+        <button class="gallery-modal-nav gallery-modal-prev" id="galleryModalPrev" aria-label="Imagem anterior">
+            <i class="fas fa-chevron-left" aria-hidden="true"></i>
+        </button>
+        <button class="gallery-modal-nav gallery-modal-next" id="galleryModalNext" aria-label="Próxima imagem">
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+        </button>
+        <div class="gallery-modal-content">
+            <img id="galleryModalImage" src="" alt="">
+        </div>
+    </div>
+
+    <script>
+        // Dados dos presentes engraçados (MANTIDOS ORIGINAIS)
+        const gifts = [
+            {
+                id: 1,
+                name: "Fura-fila do Buffet",
+                category: "festa",
+                price: "R$ 80,00",
+                description: "Garanta seu prato antes que o tio do pavê ataque a mesa.",
+                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                reserved: false,
+                pix: "00020126360014BR.GOV.BCB.PIX0114+5519995136406520400005303986540580.005802BR5925Bianca Carolina Romao Ram6009SAO PAULO62140510hpDvNpWkZ263043391"
+
+            },
+            {
+                id: 2,
+                name: "Um pedaço extra de bolo",
+                category: "festa",
+                price: "R$ 80,00",
+                description: "Porque amor vai, mas cobertura de chocolate é pra sempre.",
+                image: "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                reserved: false,
+                pix: "00020126360014BR.GOV.BCB.PIX0114+5519995136406520400005303986540580.005802BR5925Bianca Carolina Romao Ram6009SAO PAULO62140510hpDvNpWkZ263043391"
+                
+            },
+            {
+                id: 3,
+                name: "Assento VIP para ver o buquê voando",
+                category: "festa",
+                price: "R$ 90,00",
+                description: "Tenha o melhor ângulo da disputa — capacete não incluso.",
+                image: "data:image/jpeg;base64,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",
+                reserved: false,
+                pix: "00020126360014BR.GOV.BCB.PIX0114+5519995136406520400005303986540590.005802BR5925Bianca Carolina Romao Ram6009SAO PAULO621405100vySVitmRi63048F22"
+            },
+            {
+                id: 4,
+                name: "Seguro anti-buquê",
+                category: "festa",
+                price: "R$ 85,00",
+                description: "Contribua para que o buquê não vá parar na mão da sua namorada (ou esposa).",
+                image: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                reserved: false,
+                pix: "00020126360014BR.GOV.BCB.PIX0114+5519995136406520400005303986540585.005802BR5925Bianca Carolina Romao Ram6009SAO PAULO62140510duNtFyS6My6304750A"
+            },
+            {
+                id: 5,
+                name: "Direito a escolher uma música na pista de dança",
+                category: "festa",
+                price: "R$ 90,00",
+                description: "Só não vale pedir 'Evidências' mais de três vezes.",
+                image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                reserved: false,
+                pix: "00020126360014BR.GOV.BCB.PIX0114+5519995136406520400005303986540590.005802BR5925Bianca Carolina Romao Ram6009SAO PAULO621405100vySVitmRi63048F22"
+            },
+            {
+                id: 6,
+                name: "Lugar cativo na fila da sobremesa",
+                category: "festa",
+                price: "R$ 110,00",
+                description: "Prioridade garantida pra quem sabe o que realmente importa.",
+                image: "https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                reserved: false,
+                pix: "00020126360014BR.GOV.BCB.PIX0114+55199951364065204000053039865406110.005802BR5925Bianca Carolina Romao Ram6009SAO PAULO621405104NPZyB0rFX63049AA7"
+            },
+            {
+                id: 7,
+                name: "Kit 'Primeira manhã de casados'",
+                category: "sobrevivencia",
+                price: "R$ 100,00",
+                description: "Café, pão de queijo e a lembrança de que agora é pra sempre.",
+                image: "data:image/jpeg;base64,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",
+                reserved: false,
+                pix: "00020126360014BR.GOV.BCB.PIX0114+55199951364065204000053039865406100.005802BR5925Bianca Carolina Romao Ram6009SAO PAULO62140510lWzN0yQMee63042871"
+            },
+            {
+                id: 8,
+                name: "Protetor solar do noivo",
+                category: "sobrevivencia",
+                price: "R$ 80,00",
+                description: "Para evitar que ele volte da lua de mel parecendo um camarão apaixonado.",
+                image: "https://img.freepik.com/fotos-gratis/homem-queimado-de-sol-vista-frontal-posando-com-tabua-de-salvacao_23-2150404723.jpg",
+                reserved: false,
+                 pix: "00020126360014BR.GOV.BCB.PIX0114+5519995136406520400005303986540580.005802BR5925Bianca Carolina Romao Ram6009SAO PAULO62140510hpDvNpWkZ263043391"
+            },
+            {
+                id: 9,
+                name: "Drink romântico à beira-mar",
+                category: "sobrevivencia",
+                price: "R$ 120,00",
+                description: "Duas doses de amor, uma de risada e gelo à vontade.",
+                image: "https://images.unsplash.com/photo-1470337458703-46ad1756a187?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                reserved: false,
+                 pix: "00020126360014BR.GOV.BCB.PIX0114+55199951364065204000053039865406120.005802BR5925Bianca Carolina Romao Ram6009SAO PAULO62140510BCYrM8XuYy63040C30"
+            },
+            {
+                id: 10,
+                name: "Sessão de massagem para os sobreviventes do casamento",
+                category: "sobrevivencia",
+                price: "R$ 110,00",
+                description: "Relaxar depois da dança e dos abraços de 5 minutos.",
+                image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                reserved: false,
+                 pix: "00020126360014BR.GOV.BCB.PIX0114+55199951364065204000053039865406110.005802BR5925Bianca Carolina Romao Ram6009SAO PAULO621405104NPZyB0rFX63049AA7"
+            },
+            {
+                id: 11,
+                name: "Aula express de 'como dividir o controle da TV'",
+                category: "sobrevivencia",
+                price: "R$ 80,00",
+                description: "O verdadeiro teste de compatibilidade do casal.",
+                image: "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                reserved: false,
+                 pix: "00020126360014BR.GOV.BCB.PIX0114+5519995136406520400005303986540580.005802BR5925Bianca Carolina Romao Ram6009SAO PAULO62140510hpDvNpWkZ263043391"
+            },
+            {
+                id: 12,
+                name: "Pizza da reconciliação",
+                category: "sobrevivencia",
+                price: "R$ 100,00",
+                description: "Para o primeiro 'você dorme no sofá' da vida a dois.",
+                image: "https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                reserved: false,
+                 pix: "00020126360014BR.GOV.BCB.PIX0114+55199951364065204000053039865406100.005802BR5925Bianca Carolina Romao Ram6009SAO PAULO62140510lWzN0yQMee63042871"
+            },
+            {
+                id: 13,
+                name: "Kit de 'GPS do amor'",
+                category: "sobrevivencia",
+                price: "R$ 85,00",
+                description: "Inclui: paciência, humor e um mapa para evitar brigas no carro.",
+                image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                reserved: false,
+                 pix: "00020126360014BR.GOV.BCB.PIX0114+5519995136406520400005303986540585.005802BR5925Bianca Carolina Romao Ram6009SAO PAULO62140510duNtFyS6My6304750A"
+            },
+            {
+                id: 14,
+                name: "Fundo 'Decidindo onde jantar'",
+                category: "sobrevivencia",
+                price: "R$ 100,00",
+                description: "Porque essa escolha será o novo 'quem pede desculpa primeiro?'.",
+                image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                reserved: false,
+                 pix: "00020126360014BR.GOV.BCB.PIX0114+55199951364065204000053039865406100.005802BR5925Bianca Carolina Romao Ram6009SAO PAULO62140510lWzN0yQMee63042871"
+            },
+            {
+                id: 15,
+                name: "Seguro anti-malas extraviadas",
+                category: "sobrevivencia",
+                price: "R$ 85,00",
+                description: "Para garantir que a lua de mel não comece com stress.",
+                image: "https://www.infomoney.com.br/wp-content/uploads/2019/06/malas-no-aeroporto.jpg?fit=900%2C600&quality=50&strip=all",
+                reserved: false,
+                 pix: "00020126360014BR.GOV.BCB.PIX0114+5519995136406520400005303986540585.005802BR5925Bianca Carolina Romao Ram6009SAO PAULO62140510duNtFyS6My6304750A"
+            },
+            {
+                id: 16,
+                name: "Caixa 'kit sobrevivência da viagem'",
+                category: "sobrevivencia",
+                price: "R$ 100,00",
+                description: "Inclui: remédio pra enjoo, tapa-olhos e um aviso de 'não me acorde antes das 10h'.",
+                image: "https://img.elo7.com.br/product/600x380/4185639/mascara-de-dormir-tapa-olho-relaxol-remedio-tapa-olho.jpg",
+                reserved: false,
+                 pix: "00020126360014BR.GOV.BCB.PIX0114+55199951364065204000053039865406100.005802BR5925Bianca Carolina Romao Ram6009SAO PAULO62140510lWzN0yQMee63042871"
+            },
+            {
+                id: 17,
+                name: "A Primeira Compra do Casal",
+                category: "sobrevivencia",
+                price: "R$ 110,00",
+                description: "Arroz, sabão em pó e a sensação de que agora é vida de adulto mesmo.",
+                image: "https://images.unsplash.com/photo-1583258292688-d0213dc5a3a8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                reserved: false,
+                 pix: "00020126360014BR.GOV.BCB.PIX0114+55199951364065204000053039865406110.005802BR5925Bianca Carolina Romao Ram6009SAO PAULO621405104NPZyB0rFX63049AA7"
+            },
+            {
+                id: 18,
+                name: "Passagem simbólica para o paraíso",
+                category: "lua-de-mel",
+                price: "R$ 110,00",
+                description: "Ida garantida. Volta... a gente negocia.",
+                image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                reserved: false,
+                 pix: "00020126360014BR.GOV.BCB.PIX0114+55199951364065204000053039865406110.005802BR5925Bianca Carolina Romao Ram6009SAO PAULO621405104NPZyB0rFX63049AA7"
+            },
+            {
+                id: 19,
+                name: "Um jantar romântico à luz de velas",
+                category: "lua-de-mel",
+                price: "R$ 100,00",
+                description: "O que importa é o clima — e a comida, claro.",
+                image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                reserved: false,
+                 pix: "00020126360014BR.GOV.BCB.PIX0114+55199951364065204000053039865406100.005802BR5925Bianca Carolina Romao Ram6009SAO PAULO62140510lWzN0yQMee63042871"
+            },
+            {
+                id: 20,
+                name: "Sorvetes infinitos debaixo do sol",
+                category: "lua-de-mel",
+                price: "R$ 80,00",
+                description: "Patrocinando o doce da lua de mel (literalmente).",
+                image: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                reserved: false,
+                 pix: "00020126360014BR.GOV.BCB.PIX0114+5519995136406520400005303986540580.005802BR5925Bianca Carolina Romao Ram6009SAO PAULO62140510hpDvNpWkZ263043391"
+            },
+            {
+                id: 21,
+                name: "Passeio de aventura (leve)",
+                category: "lua-de-mel",
+                price: "R$ 110,00",
+                description: "Algo entre 'romântico' e 'vamos ver se ele segura minha mão direito'.",
+                image: "https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                reserved: false,
+                 pix: "00020126360014BR.GOV.BCB.PIX0114+55199951364065204000053039865406110.005802BR5925Bianca Carolina Romao Ram6009SAO PAULO621405104NPZyB0rFX63049AA7"
+            },
+            {
+                id: 22,
+                name: "Fundo 'foto de casal perfeita'",
+                category: "lua-de-mel",
+                price: "R$ 80,00",
+                description: "Para pagar o fotógrafo que vai dizer: 'agora olha pro outro e ri'.",
+                image: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                reserved: false,
+                 pix: "00020126360014BR.GOV.BCB.PIX0114+5519995136406520400005303986540580.005802BR5925Bianca Carolina Romao Ram6009SAO PAULO62140510hpDvNpWkZ263043391"
+            }
+        ];
+
+        // Dados da galeria
+        const galleryImages = [
+            {
+                src: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                alt: "Noivos se beijando"
+            },
+            {
+                src: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                alt: "Noivos sorrindo"
+            },
+            {
+                src: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                alt: "Noivos dançando"
+            },
+            {
+                src: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                alt: "Noivos em festa"
+            },
+            {
+                src: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                alt: "Noivos na natureza"
+            },
+            {
+                src: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                alt: "Noivos em pose romântica"
+            }
+        ];
+
+        // Elementos DOM
+        const giftsContainer = document.getElementById('giftsContainer');
+        const galleryGrid = document.getElementById('galleryGrid');
+        const categoryButtons = document.querySelectorAll('.category-btn');
+        const pixPaymentModal = document.getElementById('pixPaymentModal');
+        const pixAmount = document.getElementById('pixAmount');
+        const pixCode = document.getElementById('pixCode');
+        const copyPixBtn = document.getElementById('copyPixBtn');
+        const cancelPayment = document.getElementById('cancelPayment');
+        const confirmPayment = document.getElementById('confirmPayment');
+        const paymentLoading = document.getElementById('paymentLoading');
+        const paymentConfirmed = document.getElementById('paymentConfirmed');
+        const closeSuccess = document.getElementById('closeSuccess');
+        const submitButton = document.getElementById('submitButton');
+        const loadingIcon = document.getElementById('loadingIcon');
+        const galleryModal = document.getElementById('galleryModal');
+        const galleryModalImage = document.getElementById('galleryModalImage');
+        const galleryModalClose = document.getElementById('galleryModalClose');
+        const galleryModalPrev = document.getElementById('galleryModalPrev');
+        const galleryModalNext = document.getElementById('galleryModalNext');
+
+        // Inicializar loading como oculto
+        loadingIcon.style.display = 'none';
+
+        let currentPaymentGift = null;
+        let currentGalleryIndex = 0;
+
+        // Função para renderizar presentes (MANTIDA ORIGINAL)
+        function renderGifts(category = 'all') {
+            giftsContainer.innerHTML = '';
+            
+            const filteredGifts = category === 'all' 
+                ? gifts 
+                : gifts.filter(gift => gift.category === category);
+            
+            filteredGifts.forEach(gift => {
+                const giftElement = document.createElement('div');
+                giftElement.className = `gift-item ${gift.reserved ? 'gift-reserved' : ''}`;
+                giftElement.innerHTML = `
+                    <div class="gift-image">
+                        <img src="${gift.image}" alt="${gift.name}" loading="lazy">
+                    </div>
+                    <div class="gift-info">
+                        <h3 class="gift-name">${gift.name}</h3>
+                        <p class="gift-price">${gift.price}</p>
+                        <p class="gift-description">${gift.description}</p>
+                        <div class="gift-actions">
+                            <button class="btn btn-primary" onclick="openPixPayment(${gift.id})">
+                                ${gift.reserved ? 'Indisponível' : 'Presentear com PIX'}
+                            </button>
+                            <button class="btn btn-secondary" onclick="showGiftDetails(${gift.id})">
+                                Detalhes
+                            </button>
+                        </div>
+                    </div>
+                `;
+                giftsContainer.appendChild(giftElement);
+            });
+        }
+
+        // Função para renderizar galeria
+        function renderGallery() {
+            galleryGrid.innerHTML = '';
+            
+            galleryImages.forEach((image, index) => {
+                const galleryItem = document.createElement('div');
+                galleryItem.className = 'gallery-item';
+                galleryItem.innerHTML = `
+                    <img src="${image.src}" alt="${image.alt}" loading="lazy">
+                `;
+                galleryItem.addEventListener('click', () => openGalleryModal(index));
+                galleryGrid.appendChild(galleryItem);
+            });
+        }
+
+        // Função para abrir modal da galeria
+        function openGalleryModal(index) {
+            currentGalleryIndex = index;
+            updateGalleryModal();
+            galleryModal.style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // Previne scroll da página
+        }
+
+        // Função para fechar modal da galeria
+        function closeGalleryModal() {
+            galleryModal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Restaura scroll da página
+        }
+
+        // Função para atualizar imagem no modal da galeria
+        function updateGalleryModal() {
+            const image = galleryImages[currentGalleryIndex];
+            galleryModalImage.src = image.src;
+            galleryModalImage.alt = image.alt;
+        }
+
+        // Função para navegar na galeria
+        function navigateGallery(direction) {
+            if (direction === 'prev') {
+                currentGalleryIndex = (currentGalleryIndex - 1 + galleryImages.length) % galleryImages.length;
+            } else {
+                currentGalleryIndex = (currentGalleryIndex + 1) % galleryImages.length;
+            }
+            updateGalleryModal();
+        }
+
+        // Função para abrir modal de pagamento PIX (NOVA FORMA)
+        function openPixPayment(giftId) {
+            const gift = gifts.find(g => g.id === giftId);
+            
+            if (gift.reserved) {
+                alert('Este presente já foi presentado por outro convidado. Por favor, escolha outra opção.');
+                return;
+            }
+            
+            currentPaymentGift = gift;
+            
+            // Atualizar informações do modal
+            const priceNumber = parseFloat(gift.price.replace('R$ ', '').replace(',', '.'));
+            pixAmount.textContent = `R$ ${priceNumber.toFixed(2).replace('.', ',')}`;
+            
+            // Usar código PIX do presente se existir, senão gerar um
+            const pixCodeText = gift.pix || generatePixCode(gift);
+            pixCode.textContent = pixCodeText;
+            
+            // Resetar estados
+            resetPaymentModal();
+            
+            // Mostrar modal
+            pixPaymentModal.style.display = 'flex';
+        }
+
+        // Função para gerar código PIX (simulação)
+        function generatePixCode(gift) {
+            const timestamp = Date.now();
+            const randomId = Math.random().toString(36).substr(2, 9);
+            const amount = parseFloat(gift.price.replace('R$ ', '').replace(',', '.')).toFixed(2);
+            
+            return `00020126580014br.gov.bcb.pix0136${randomId}-${timestamp}520400005303986540${amount.length}${amount}5802BR5913LEANDRO E BIANCA6008SAO PAULO62140510RC${timestamp}6304A3B2`;
+        }
+
+        // Função para mostrar detalhes do presente (MANTIDA ORIGINAL)
+        function showGiftDetails(giftId) {
+            const gift = gifts.find(g => g.id === giftId);
+            alert(`${gift.name}\n\n${gift.description}\n\nValor: ${gift.price}\n\nClique em "Presentear com PIX" para reservar este presente!`);
+        }
+
+        // Função para copiar código PIX
+        copyPixBtn.addEventListener('click', function() {
+            navigator.clipboard.writeText(pixCode.textContent).then(() => {
+                copyPixBtn.innerHTML = '<i class="fas fa-check"></i> Código copiado!';
+                copyPixBtn.classList.add('copied');
+                
+                setTimeout(() => {
+                    copyPixBtn.innerHTML = '<i class="fas fa-copy"></i> Copiar código';
+                    copyPixBtn.classList.remove('copied');
+                }, 2000);
+            }).catch(err => {
+                console.error('Erro ao copiar:', err);
+                // Fallback para seleção manual
+                const textArea = document.createElement('textarea');
+                textArea.value = pixCode.textContent;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                
+                copyPixBtn.innerHTML = '<i class="fas fa-check"></i> Cópia manual!';
+                setTimeout(() => {
+                    copyPixBtn.innerHTML = '<i class="fas fa-copy"></i> Copiar código';
+                }, 2000);
+            });
+        });
+
+        // Função para confirmar pagamento
+        confirmPayment.addEventListener('click', function() {
+            // Mostrar loading
+            document.querySelector('.pix-body').style.display = 'none';
+            document.querySelector('.pix-footer').style.display = 'none';
+            paymentLoading.style.display = 'block';
+            
+            // Simular processamento do pagamento
+            setTimeout(() => {
+                if (currentPaymentGift) {
+                    // Marcar presente como reservado
+                    currentPaymentGift.reserved = true;
+                    currentPaymentGift.reservedBy = "Você";
+                    currentPaymentGift.reservationDate = new Date().toLocaleDateString('pt-BR');
+                    
+                    // Atualizar interface
+                    renderGifts();
+                    
+                    // Mostrar confirmação
+                    paymentLoading.style.display = 'none';
+                    paymentConfirmed.style.display = 'block';
+                }
+            }, 3000);
+        });
+
+        // Função para fechar modal de pagamento
+        function closePixPayment() {
+            pixPaymentModal.style.display = 'none';
+            currentPaymentGift = null;
+            resetPaymentModal();
+        }
+
+        // Função para resetar modal
+        function resetPaymentModal() {
+            document.querySelector('.pix-body').style.display = 'block';
+            document.querySelector('.pix-footer').style.display = 'block';
+            paymentLoading.style.display = 'none';
+            paymentConfirmed.style.display = 'none';
+            
+            copyPixBtn.innerHTML = '<i class="fas fa-copy"></i> Copiar código';
+            copyPixBtn.classList.remove('copied');
+        }
+
+        // Event Listeners para categorias (MANTIDO ORIGINAL)
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                categoryButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                renderGifts(button.dataset.category);
+            });
+        });
+
+        // Event Listeners do modal PIX
+        cancelPayment.addEventListener('click', closePixPayment);
+        closeSuccess.addEventListener('click', closePixPayment);
+
+        // Fechar modal ao clicar fora
+        pixPaymentModal.addEventListener('click', (e) => {
+            if (e.target === pixPaymentModal) {
+                closePixPayment();
+            }
+        });
+
+        // Event Listeners da galeria
+        galleryModalClose.addEventListener('click', closeGalleryModal);
+        galleryModalPrev.addEventListener('click', () => navigateGallery('prev'));
+        galleryModalNext.addEventListener('click', () => navigateGallery('next'));
+
+        // Fechar galeria ao clicar fora
+        galleryModal.addEventListener('click', (e) => {
+            if (e.target === galleryModal) {
+                closeGalleryModal();
+            }
+        });
+
+        // Navegação por teclado na galeria
+        document.addEventListener('keydown', (e) => {
+            if (galleryModal.style.display === 'flex') {
+                if (e.key === 'Escape') {
+                    closeGalleryModal();
+                } else if (e.key === 'ArrowLeft') {
+                    navigateGallery('prev');
+                } else if (e.key === 'ArrowRight') {
+                    navigateGallery('next');
+                }
+            }
+        });
+
+        // Contagem regressiva para a data do casamento (MANTIDA ORIGINAL)
+        function updateCountdown() {
+            const weddingDate = new Date('March 14, 2026 16:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').innerHTML = days;
+            document.getElementById('hours').innerHTML = hours;
+            document.getElementById('minutes').innerHTML = minutes;
+            document.getElementById('seconds').innerHTML = seconds;
+            
+            if (distance < 0) {
+                clearInterval(countdownTimer);
+                document.getElementById('countdown').innerHTML = "<h2>O grande dia chegou!</h2>";
+            }
+        }
+        
+        const countdownTimer = setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Formulário de confirmação via WhatsApp (MANTIDO ORIGINAL)
+        document.getElementById('rsvpForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Mostrar loading
+            loadingIcon.style.display = 'inline-block';
+            submitButton.disabled = true;
+            
+            // Coletar dados do formulário
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const guests = document.getElementById('guests').value;
+            const attendance = document.getElementById('attendance').value;
+            const message = document.getElementById('message').value;
+            
+            // Formatar mensagem para WhatsApp
+            const attendanceText = attendance === 'yes' ? 'Sim, estarei presente' : 'Não poderei comparecer';
+            const guestText = guests === '0' ? 'Vou sozinho(a)' : `Vou com ${guests} acompanhante(s)`;
+            
+            let whatsappMessage = `Confirmação de Presença - Casamento Leandro & Bianca%0A%0A`;
+            whatsappMessage += `Nome: ${name}%0A`;
+            whatsappMessage += `Telefone: ${phone}%0A`;
+            whatsappMessage += `Presença: ${attendanceText}%0A`;
+            whatsappMessage += `Acompanhantes: ${guestText}%0A`;
+            
+            if (message) {
+                whatsappMessage += `Mensagem: ${message}%0A`;
+            }
+            
+            // Número de telefone dos noivos
+            const phoneNumber = '5519989409943';
+            
+            // Simular processamento
+            setTimeout(() => {
+                // Abrir WhatsApp com a mensagem pré-preenchida
+                window.open(`https://wa.me/${phoneNumber}?text=${whatsappMessage}`, '_blank');
+                
+                // Limpar formulário
+                this.reset();
+                
+                // Esconder loading
+                loadingIcon.style.display = 'none';
+                submitButton.disabled = false;
+                
+                // Mostrar mensagem de confirmação
+                alert('Obrigado por confirmar sua presença! Agora você será redirecionado para o WhatsApp para finalizar o envio.');
+            }, 1500);
+        });
+        
+        // Animação de entrada (MANTIDA ORIGINAL)
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            fadeElements.forEach(el => {
+                el.style.opacity = 0;
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                observer.observe(el);
+            });
+            
+            // Inicializar a lista de presentes
+            renderGifts();
+            
+            // Inicializar a galeria
+            renderGallery();
+        });
+    </script>
+</body>
+</html>
